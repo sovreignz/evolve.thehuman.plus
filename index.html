@@ -11,7 +11,14 @@
         tailwind.config = {
             theme: {
                 extend: {
-                    colors: { void: '#020202', gold: '#D4AF37', ash: '#666666' },
+                    colors: { 
+                        void: '#020202', 
+                        // Rose Gold Palette
+                        gold: '#B88A6E',
+                        'gold-light': '#D4C0AD',
+                        'gold-dim': '#8A5E45',
+                        ash: '#666666' 
+                    },
                     fontFamily: { serif: ['Cinzel', 'serif'], mono: ['Space Mono', 'monospace'] },
                     backgroundImage: { 'noise': "url('data:image/svg+xml,%3Csvg viewBox=\"0 0 200 200\" xmlns=\"http://www.w3.org/2000/svg\"%3E%3Cfilter id=\"noiseFilter\"%3E%3CfeTurbulence type=\"fractalNoise\" baseFrequency=\"0.8\" numOctaves=\"3\" stitchTiles=\"stitch\"/%3E%3C/filter%3E%3Crect width=\"100%25\" height=\"100%25\" filter=\"url(%23noiseFilter)\" opacity=\"0.04\"/%3E%3C/svg%3E')" }
                 }
@@ -54,8 +61,8 @@
         <!-- Waitlist Form -->
         <div class="max-w-sm mx-auto pt-8">
             <form class="flex border border-white/20 bg-white/5 p-1 group focus-within:border-gold transition-colors" onsubmit="event.preventDefault()">
-                <input type="email" placeholder="ENTER_EMAIL_ADDRESS" class="bg-transparent w-full px-4 py-3 text-xs font-mono text-white placeholder-white/30 focus:outline-none uppercase">
-                <button class="bg-white/10 hover:bg-gold hover:text-void text-gold px-6 py-2 font-mono text-[10px] tracking-widest uppercase transition-all">
+                <input type="email" placeholder="ENTER_EMAIL_ADDRESS" class="bg-transparent w-full px-4 py-3 text-xs font-mono text-white placeholder-white/30 focus:outline-none uppercase focus:placeholder-gold/50">
+                <button class="bg-white/10 hover:bg-gold hover:text-void text-gold px-6 py-2 font-mono text-[10px] tracking-widest uppercase transition-all duration-300">
                     Join List
                 </button>
             </form>
