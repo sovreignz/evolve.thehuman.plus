@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EVOLVE | Action Cohort</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { void: '#020202', gold: '#D4AF37', ash: '#666666' },
+                    fontFamily: { serif: ['Cinzel', 'serif'], mono: ['Space Mono', 'monospace'] },
+                    backgroundImage: { 'noise': "url('data:image/svg+xml,%3Csvg viewBox=\"0 0 200 200\" xmlns=\"http://www.w3.org/2000/svg\"%3E%3Cfilter id=\"noiseFilter\"%3E%3CfeTurbulence type=\"fractalNoise\" baseFrequency=\"0.8\" numOctaves=\"3\" stitchTiles=\"stitch\"/%3E%3C/filter%3E%3Crect width=\"100%25\" height=\"100%25\" filter=\"url(%23noiseFilter)\" opacity=\"0.04\"/%3E%3C/svg%3E')" }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-void bg-noise text-white h-screen flex flex-col items-center justify-center overflow-hidden relative">
+
+    <!-- Background Elements -->
+    <div class="absolute inset-0 flex items-center justify-center opacity-10 pointer-events-none">
+        <!-- Concentric Circles -->
+        <div class="absolute w-[400px] h-[400px] border border-dashed border-gold rounded-full animate-[spin_20s_linear_infinite]"></div>
+        <div class="absolute w-[600px] h-[600px] border border-white/10 rounded-full"></div>
+    </div>
+
+    <div class="relative z-10 max-w-2xl px-6 text-center space-y-8">
+        <!-- Status -->
+        <div class="flex items-center justify-center gap-2 font-mono text-[10px] text-gold tracking-[0.3em] uppercase">
+            <span class="w-2 h-2 bg-gold rounded-full animate-pulse"></span>
+            <span>Cohort Forming</span>
+        </div>
+
+        <!-- Title -->
+        <h1 class="font-serif text-6xl md:text-8xl text-transparent bg-clip-text bg-gradient-to-b from-white to-ash tracking-tight">
+            EVOLVE
+        </h1>
+
+        <!-- Subtitle -->
+        <p class="font-mono text-xs md:text-sm text-ash tracking-widest uppercase">
+            Implementation &middot; Acceleration &middot; Action
+        </p>
+
+        <!-- Description -->
+        <p class="font-sans font-light text-lg text-gray-400 leading-relaxed max-w-md mx-auto">
+            You have the Map. Now walk the Path. <br>
+            A 6-week high-intensity cohort to transmute your <span class="text-white">Codex</span> into a tangible reality.
+        </p>
+
+        <!-- Waitlist Form -->
+        <div class="max-w-sm mx-auto pt-8">
+            <form class="flex border border-white/20 bg-white/5 p-1 group focus-within:border-gold transition-colors" onsubmit="event.preventDefault()">
+                <input type="email" placeholder="ENTER_EMAIL_ADDRESS" class="bg-transparent w-full px-4 py-3 text-xs font-mono text-white placeholder-white/30 focus:outline-none uppercase">
+                <button class="bg-white/10 hover:bg-gold hover:text-void text-gold px-6 py-2 font-mono text-[10px] tracking-widest uppercase transition-all">
+                    Join List
+                </button>
+            </form>
+            <p class="mt-4 font-mono text-[9px] text-ash/50 uppercase tracking-widest">
+                Prerequisite: ORIGIN Completion
+            </p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="absolute bottom-8 font-mono text-[9px] text-ash/30 uppercase tracking-widest">
+        System: Human+ // Module: 03
+    </div>
+    
+    <script>lucide.createIcons();</script>
+</body>
+</html>
