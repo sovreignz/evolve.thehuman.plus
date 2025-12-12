@@ -3,80 +3,261 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EVOLVE | Action Cohort</title>
+    <title>Human+ APEX Protocol - Unlock Your Potential</title>
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
-    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Lemon Squeezy Script (Required for the overlay checkout) -->
+    <script src="https://assets.lemonsqueezy.com/lemon.js" defer></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
     <script>
         tailwind.config = {
             theme: {
                 extend: {
-                    colors: { 
-                        void: '#020202', 
-                        // Rose Gold Palette
-                        gold: '#B88A6E',
-                        'gold-light': '#D4C0AD',
-                        'gold-dim': '#8A5E45',
-                        ash: '#666666' 
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
                     },
-                    fontFamily: { serif: ['Cinzel', 'serif'], mono: ['Space Mono', 'monospace'] },
-                    backgroundImage: { 'noise': "url('data:image/svg+xml,%3Csvg viewBox=\"0 0 200 200\" xmlns=\"http://www.w3.org/2000/svg\"%3E%3Cfilter id=\"noiseFilter\"%3E%3CfeTurbulence type=\"fractalNoise\" baseFrequency=\"0.8\" numOctaves=\"3\" stitchTiles=\"stitch\"/%3E%3C/filter%3E%3Crect width=\"100%25\" height=\"100%25\" filter=\"url(%23noiseFilter)\" opacity=\"0.04\"/%3E%3C/svg%3E')" }
+                    colors: {
+                        brand: {
+                            dark: '#0f172a',
+                            accent: '#3b82f6',
+                            highlight: '#f59e0b',
+                        }
+                    },
+                    boxShadow: {
+                        'glow': '0 0 20px rgba(59, 130, 246, 0.5)',
+                    }
                 }
             }
         }
     </script>
+    <style>
+        /* Custom smooth scroll behavior */
+        html { scroll-behavior: smooth; }
+        
+        /* Pulse animation for the buttons */
+        @keyframes subtle-pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.02); }
+        }
+        .cta-pulse {
+            animation: subtle-pulse 2s infinite;
+        }
+    </style>
 </head>
-<body class="bg-void bg-noise text-white h-screen flex flex-col items-center justify-center overflow-hidden relative">
+<body class="bg-slate-950 text-slate-200 font-sans antialiased selection:bg-brand-accent selection:text-white">
 
-    <!-- Background Elements -->
-    <div class="absolute inset-0 flex items-center justify-center opacity-10 pointer-events-none">
-        <!-- Concentric Circles -->
-        <div class="absolute w-[400px] h-[400px] border border-dashed border-gold rounded-full animate-[spin_20s_linear_infinite]"></div>
-        <div class="absolute w-[600px] h-[600px] border border-white/10 rounded-full"></div>
-    </div>
-
-    <div class="relative z-10 max-w-2xl px-6 text-center space-y-8">
-        <!-- Status -->
-        <div class="flex items-center justify-center gap-2 font-mono text-[10px] text-gold tracking-[0.3em] uppercase">
-            <span class="w-2 h-2 bg-gold rounded-full animate-pulse"></span>
-            <span>Cohort Forming</span>
+    <!-- HEADER / HERO SECTION -->
+    <header class="relative px-6 pt-16 pb-20 text-center max-w-2xl mx-auto">
+        <div class="inline-block px-3 py-1 mb-6 text-xs font-semibold tracking-wider text-blue-400 uppercase bg-blue-900/30 rounded-full border border-blue-800">
+            Digital Protocol V2.0
         </div>
-
-        <!-- Title -->
-        <h1 class="font-serif text-6xl md:text-8xl text-transparent bg-clip-text bg-gradient-to-b from-white to-ash tracking-tight">
-            EVOLVE
+        <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight text-white mb-6 leading-tight">
+            Stop Operating at <br>
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-emerald-400">Default Settings.</span>
         </h1>
-
-        <!-- Subtitle -->
-        <p class="font-mono text-xs md:text-sm text-ash tracking-widest uppercase">
-            Implementation &middot; Acceleration &middot; Action
+        <p class="text-lg text-slate-400 mb-8 leading-relaxed">
+            Most people live their entire lives at 40% capacity. The <strong>Human+ APEX Protocol</strong> is the digital operating system to unlock your biological and cognitive maximum.
         </p>
-
-        <!-- Description -->
-        <p class="font-sans font-light text-lg text-gray-400 leading-relaxed max-w-md mx-auto">
-            You have the Map. Now walk the Path. <br>
-            A 6-week high-intensity cohort to transmute your <span class="text-white">Codex</span> into a tangible reality.
-        </p>
-
-        <!-- Waitlist Form -->
-        <div class="max-w-sm mx-auto pt-8">
-            <form class="flex border border-white/20 bg-white/5 p-1 group focus-within:border-gold transition-colors" onsubmit="event.preventDefault()">
-                <input type="email" placeholder="ENTER_EMAIL_ADDRESS" class="bg-transparent w-full px-4 py-3 text-xs font-mono text-white placeholder-white/30 focus:outline-none uppercase focus:placeholder-gold/50">
-                <button class="bg-white/10 hover:bg-gold hover:text-void text-gold px-6 py-2 font-mono text-[10px] tracking-widest uppercase transition-all duration-300">
-                    Join List
-                </button>
-            </form>
-            <p class="mt-4 font-mono text-[9px] text-ash/50 uppercase tracking-widest">
-                Prerequisite: ORIGIN Completion
-            </p>
+        
+        <!-- CTA 1 -->
+        <div class="flex justify-center">
+            <a href="https://humanplus.lemonsqueezy.com/buy/74ae7d96-ff70-4a42-90f5-9aae6cbe95d8?embed=1&logo=0" 
+               class="lemonsqueezy-button group relative inline-flex items-center justify-center w-full sm:w-auto px-8 py-4 text-lg font-bold text-white transition-all duration-200 bg-brand-accent rounded-xl hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-600 focus:ring-offset-slate-900 shadow-glow cta-pulse">
+                <span>Unlock Human+ Protocol</span>
+                <svg class="w-5 h-5 ml-2 -mr-1 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path></svg>
+            </a>
         </div>
-    </div>
+        <p class="mt-4 text-sm text-slate-500">Instant Digital Download • Secure Checkout</p>
+    </header>
 
-    <!-- Footer -->
-    <div class="absolute bottom-8 font-mono text-[9px] text-ash/30 uppercase tracking-widest">
-        System: Human+ // Module: 03
-    </div>
-    
-    <script>lucide.createIcons();</script>
+    <!-- PAIN POINTS -->
+    <section class="px-6 py-16 bg-slate-900 border-y border-slate-800">
+        <div class="max-w-2xl mx-auto">
+            <h2 class="text-2xl font-bold text-white mb-8 text-center">Does this sound like you?</h2>
+            
+            <div class="space-y-6">
+                <div class="flex gap-4 items-start">
+                    <div class="flex-shrink-0 w-8 h-8 flex items-center justify-center rounded-full bg-red-900/30 text-red-400 mt-1">
+                        <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold text-white">Constant Brain Fog</h3>
+                        <p class="text-slate-400 text-sm mt-1">You wake up tired. You rely on caffeine to function. By 3 PM, you're crashed.</p>
+                    </div>
+                </div>
+
+                <div class="flex gap-4 items-start">
+                    <div class="flex-shrink-0 w-8 h-8 flex items-center justify-center rounded-full bg-red-900/30 text-red-400 mt-1">
+                        <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold text-white">Stalled Progress</h3>
+                        <p class="text-slate-400 text-sm mt-1">You read the books, you buy the courses, but your actual output never changes.</p>
+                    </div>
+                </div>
+                
+                <div class="flex gap-4 items-start">
+                    <div class="flex-shrink-0 w-8 h-8 flex items-center justify-center rounded-full bg-red-900/30 text-red-400 mt-1">
+                        <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold text-white">Lack of Systems</h3>
+                        <p class="text-slate-400 text-sm mt-1">You're operating on willpower instead of protocols. Willpower fails. Protocols don't.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SOLUTION / BENEFITS -->
+    <section class="px-6 py-16 max-w-2xl mx-auto">
+        <h2 class="text-3xl font-bold text-center text-white mb-4">Enter the APEX Protocol</h2>
+        <p class="text-center text-slate-400 mb-12">A comprehensive digital system engineered to optimize your three core pillars.</p>
+
+        <div class="grid gap-6 md:grid-cols-2">
+            <!-- Benefit Card 1 -->
+            <div class="p-6 rounded-2xl bg-slate-900 border border-slate-800 hover:border-blue-500/50 transition-colors">
+                <div class="text-blue-400 mb-4">
+                    <svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                </div>
+                <h3 class="font-bold text-white text-lg mb-2">Energy Engineering</h3>
+                <p class="text-slate-400 text-sm">Sleep optimization and circadian rhythm entrainment protocols that give you 14 hours of focus.</p>
+            </div>
+
+            <!-- Benefit Card 2 -->
+            <div class="p-6 rounded-2xl bg-slate-900 border border-slate-800 hover:border-blue-500/50 transition-colors">
+                <div class="text-emerald-400 mb-4">
+                    <svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path></svg>
+                </div>
+                <h3 class="font-bold text-white text-lg mb-2">Cognitive Architecture</h3>
+                <p class="text-slate-400 text-sm">Deep work frameworks and dopamine management systems to eliminate distraction instantly.</p>
+            </div>
+
+            <!-- Benefit Card 3 -->
+            <div class="p-6 rounded-2xl bg-slate-900 border border-slate-800 hover:border-blue-500/50 transition-colors">
+                <div class="text-purple-400 mb-4">
+                    <svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
+                </div>
+                <h3 class="font-bold text-white text-lg mb-2">Digital Second Brain</h3>
+                <p class="text-slate-400 text-sm">Templates and workflows to organize your information intake and creative output.</p>
+            </div>
+            
+            <!-- Benefit Card 4 -->
+            <div class="p-6 rounded-2xl bg-slate-900 border border-slate-800 hover:border-blue-500/50 transition-colors">
+                <div class="text-pink-400 mb-4">
+                    <svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                </div>
+                <h3 class="font-bold text-white text-lg mb-2">Habit Stacking</h3>
+                <p class="text-slate-400 text-sm">The "Atomic" method for installing new behaviors that stick without relying on motivation.</p>
+            </div>
+        </div>
+
+        <!-- CTA 2 -->
+        <div class="mt-12 text-center">
+            <a href="https://humanplus.lemonsqueezy.com/buy/74ae7d96-ff70-4a42-90f5-9aae6cbe95d8?embed=1&logo=0" 
+               class="lemonsqueezy-button inline-flex items-center justify-center w-full sm:w-auto px-8 py-4 text-lg font-bold text-slate-900 transition-all duration-200 bg-white rounded-xl hover:bg-slate-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white focus:ring-offset-slate-900 shadow-lg">
+                Start My Transformation Now
+            </a>
+            <p class="mt-3 text-xs text-slate-500 uppercase tracking-widest">Instant Access via Email</p>
+        </div>
+    </section>
+
+    <!-- SOCIAL PROOF -->
+    <section class="bg-slate-900 py-16 px-6">
+        <div class="max-w-2xl mx-auto">
+            <h2 class="text-center font-bold text-white text-xl mb-10">Trusted by High Performers</h2>
+            
+            <div class="space-y-6">
+                <!-- Testimonial 1 -->
+                <div class="bg-slate-950 p-6 rounded-xl border border-slate-800">
+                    <div class="flex items-center mb-4">
+                        <div class="h-10 w-10 rounded-full bg-gradient-to-tr from-blue-500 to-cyan-400 flex items-center justify-center font-bold text-white text-sm">
+                            JD
+                        </div>
+                        <div class="ml-3">
+                            <div class="text-white font-medium">James D.</div>
+                            <div class="text-slate-500 text-xs">Software Engineer</div>
+                        </div>
+                        <div class="ml-auto flex text-yellow-500">
+                            ★★★★★
+                        </div>
+                    </div>
+                    <p class="text-slate-300 text-sm italic">"I used to burnout every 3 months. The energy protocols in module 2 alone are worth 10x the price. I feel like I upgraded my CPU."</p>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="bg-slate-950 p-6 rounded-xl border border-slate-800">
+                    <div class="flex items-center mb-4">
+                        <div class="h-10 w-10 rounded-full bg-gradient-to-tr from-purple-500 to-pink-400 flex items-center justify-center font-bold text-white text-sm">
+                            SK
+                        </div>
+                        <div class="ml-3">
+                            <div class="text-white font-medium">Sarah K.</div>
+                            <div class="text-slate-500 text-xs">Creative Director</div>
+                        </div>
+                        <div class="ml-auto flex text-yellow-500">
+                            ★★★★★
+                        </div>
+                    </div>
+                    <p class="text-slate-300 text-sm italic">"The clarity I have now is frightening. I finished a project that was dragging on for 6 months in just 2 weeks using the APEX focus blocks."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHAT'S INSIDE -->
+    <section class="py-16 px-6 max-w-2xl mx-auto border-b border-slate-800">
+        <div class="bg-slate-800/50 rounded-2xl p-8 border border-slate-700">
+            <h2 class="text-2xl font-bold text-white mb-6">Here's What You Get:</h2>
+            <ul class="space-y-4 mb-8">
+                <li class="flex items-center text-slate-300">
+                    <svg class="w-5 h-5 text-green-400 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                    The 50-page APEX Strategy Guide (PDF)
+                </li>
+                <li class="flex items-center text-slate-300">
+                    <svg class="w-5 h-5 text-green-400 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                    Notion Dashboard Template
+                </li>
+                <li class="flex items-center text-slate-300">
+                    <svg class="w-5 h-5 text-green-400 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                    Sleep & Nutrition Checklists
+                </li>
+                <li class="flex items-center text-slate-300">
+                    <svg class="w-5 h-5 text-green-400 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                    Daily "Focus" Audio Primers
+                </li>
+                <li class="flex items-center text-slate-300">
+                    <svg class="w-5 h-5 text-green-400 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                    Lifetime Updates
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <footer class="py-20 px-6 text-center">
+        <h2 class="text-3xl font-bold text-white mb-4">Ready to upgrade?</h2>
+        <p class="text-slate-400 mb-8 max-w-md mx-auto">Join hundreds of others who have reclaimed their time, energy, and focus.</p>
+        
+        <div class="flex flex-col items-center justify-center space-y-4">
+             <!-- CTA 3 -->
+            <a href="https://humanplus.lemonsqueezy.com/buy/74ae7d96-ff70-4a42-90f5-9aae6cbe95d8?embed=1&logo=0" 
+               class="lemonsqueezy-button w-full sm:w-auto px-10 py-5 text-xl font-bold text-white transition-all duration-200 bg-gradient-to-r from-blue-600 to-blue-500 rounded-xl hover:from-blue-500 hover:to-blue-400 shadow-glow hover:scale-105 transform">
+               Get Instant Access
+            </a>
+            
+            <div class="flex items-center justify-center space-x-2 text-slate-500 text-sm mt-4">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg>
+                <span>Secure SSL Checkout via Lemon Squeezy</span>
+            </div>
+        </div>
+        
+        <div class="mt-20 pt-8 border-t border-slate-900 text-slate-600 text-xs">
+            <p>&copy; 2024 Human+ Protocol. All rights reserved.</p>
+            <p class="mt-2">This site is for demonstration purposes.</p>
+        </div>
+    </footer>
+
 </body>
 </html>
